@@ -23,7 +23,8 @@ $action = {
     # Commit with a generic message
     git commit -m "new change"
     # Push the commit to the remote repository
-    git push
+    # Push the commit to the remote repository (master branch)
+    git push origin master
 }
 
 # Register events for change types
