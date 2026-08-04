@@ -1061,4 +1061,12 @@ body {
   .aurora-blob {
     animation: none !important;
   }
+
+  /* Disable orb float / glow / orbit animations for reduced motion users */
+  .top-orb,
+  .orb-halo,
+  .orb-core,
+  .orb-chip {
+    animation: none !important;
+  }
 }
