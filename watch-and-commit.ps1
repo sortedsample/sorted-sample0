@@ -19,12 +19,15 @@ $action = {
     # Debounce rapid events by waiting a short time
     Start-Sleep -Milliseconds 500
     Write-Host "Change detected, staging and committing..."
-    # Stage all changes
-    git add -A
-    # Commit with a generic message
-    git commit -m "new change"
-    # Push the commit to the remote repository (master branch)
-    git push origin master
+    # Stage all changes and capture output
+    $addResult = git add -A 2>&1
+    Write-Host "git add output: $addResult"
+    # Commit with a generic message and capture output
+    $commitResult = git commit -m "new change" 2>&1
+    Write-Host "git commit output: $commitResult"
+    # Push the commit to the remote repository (master branch) and capture output
+    $pushResult = git push origin master 2>&1
+    Write-Host "git push output: $pushResult"
 }
 
 # Register events for change types
