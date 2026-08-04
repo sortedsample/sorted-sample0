@@ -1,59 +1,136 @@
 <<<<<<< HEAD
 :root {
-  color-scheme: dark;
-  --bg: #14071f;
-  --panel: #23103d;
-  --text: #fdfbff;
-  --muted: #d8c5ff;
-  --accent: #b388ff;
-  --accent-strong: #8b5cf6;
-  --border: rgba(255, 255, 255, 0.15);
-}
+  /* Cleaned stylesheet – Version B retained after conflict resolution */
+  /* Root variables */
+  :root {
+    color-scheme: dark;
+    --bg: #14071f;
+    --panel: #23103d;
+    --text: #fdfbff;
+    --muted: #d8c5ff;
+    --accent: #b388ff;
+    --accent-strong: #8b5cf6;
+    --border: rgba(255, 255, 255, 0.15);
+  }
 
-* {
-  box-sizing: border-box;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-body {
-  margin: 0;
-  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(179, 136, 255, 0.24), transparent 24%),
-    linear-gradient(135deg, var(--bg), #1d0d33 70%, #2e1352);
-  color: var(--text);
-  line-height: 1.7;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+  body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    background:
+      radial-gradient(circle at top left, rgba(179, 136, 255, 0.24), transparent 24%),
+      linear-gradient(135deg, var(--bg), #1d0d33 70%, #2e1352);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-.background-glow {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-}
+  .background-glow {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
 
-/* ── Aurora blobs ── */
-.aurora-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.28;
-  will-change: transform;
-}
+  /* ── Aurora blobs ── */
+  .aurora-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.28;
+    will-change: transform;
+  }
 
-.blob-1 {
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(179, 136, 255, 0.7), transparent 70%);
-  top: -15%;
-  right: -10%;
-  animation: drift-a 22s ease-in-out infinite;
-}
+  .blob-1 {
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(179, 136, 255, 0.7), transparent 70%);
+    top: -15%;
+    right: -10%;
+    animation: drift-a 22s ease-in-out infinite;
+  }
+
+  .blob-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.5), transparent 70%);
+    bottom: -10%;
+    left: -8%;
+    animation: drift-b 26s ease-in-out infinite;
+  }
+
+  .blob-3 {
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(216, 197, 255, 0.35), transparent 70%);
+    top: 40%;
+    left: 50%;
+    animation: drift-c 30s ease-in-out infinite;
+  }
+
+  /* Additional subtle blobs */
+  .blob-4 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.4), transparent 70%);
+    bottom: 20%;
+    right: -5%;
+    animation: drift-d 28s ease-in-out infinite;
+  }
+
+  .blob-5 {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(179, 136, 255, 0.3), transparent 70%);
+    top: 10%;
+    left: -8%;
+    animation: drift-e 26s ease-in-out infinite;
+  }
+
+  @keyframes drift-a {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(-60px, 40px) scale(1.08); }
+    50% { transform: translate(-30px, -20px) scale(0.94); }
+    75% { transform: translate(50px, -30px) scale(1.05); }
+  }
+
+  @keyframes drift-b {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(50px, -30px) scale(1.06); }
+    50% { transform: translate(-20px, 40px) scale(0.92); }
+    75% { transform: translate(-40px, -20px) scale(1.04); }
+  }
+
+  @keyframes drift-c {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-40px, -50px) scale(1.1); }
+    66% { transform: translate(30px, 30px) scale(0.9); }
+  }
+
+  @keyframes drift-d {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(30px, -20px) scale(1.07); }
+    50% { transform: translate(-25px, 35px) scale(0.93); }
+    75% { transform: translate(40px, 10px) scale(1.05); }
+  }
+
+  @keyframes drift-e {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    20% { transform: translate(-30px, 20px) scale(1.08); }
+    40% { transform: translate(25px, -15px) scale(0.92); }
+    60% { transform: translate(-20px, -25px) scale(1.04); }
+    80% { transform: translate(15px, 30px) scale(0.96); }
+  }
+
+  /* Rest of the stylesheet (unchanged) */
 
 .blob-2 {
   width: 500px;
