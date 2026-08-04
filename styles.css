@@ -1284,7 +1284,7 @@ html {
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-
+  /* Removed hover rule that altered animation duration, preventing gradient reset on hover */
 .navbar {
   max-width: 1400px;
   margin: 0 auto;
@@ -1364,6 +1364,49 @@ html {
 .contact-section p {
   color: var(--muted);
   font-size: 1.02rem;
+}
+
+/* Socials container now displays two boxes side‑by‑side */
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Individual rectangle styling */
+.social-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual social link styling */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.2rem; /* larger text */
+}
+
+.social-link:hover {
+  opacity: 0.85;
+}
+
+/* Global increase of base font size for better readability */
+body {
+  font-size: 1.1rem;
+}
+
+.social-link i {
+  font-size: 1.2rem;
 }
 
 .work-category p {
@@ -1815,18 +1858,7 @@ html {
   50%      { background-position: 100% 0%; }
 }
 
-.eyebrow:hover,
-.panel-label:hover,
-.work-heading h3:hover,
-.card-number:hover,
-.section-title h2:hover,
-.service-item h3:hover,
-.pricing-card h3:hover,
-.media-card figcaption:hover,
-.audio-card figcaption:hover {
-  animation-duration: 2s;
-  transform: translateY(-1px);
-}
+/* Hover rule removed to keep gradient animation continuous and prevent reset */
 
 @media (prefers-reduced-motion: reduce) {
   .gradient-text,
@@ -1906,8 +1938,8 @@ html {
   inset: 0;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, rgba(19, 7, 38, 0.96), rgba(19, 7, 38, 0.98));
-  z-index: 9999;
+  background: rgb(19, 7, 38);
+  z-index: 99999;
   opacity: 1;
   transition: opacity 0.8s ease;
 }
