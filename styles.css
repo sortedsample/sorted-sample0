@@ -136,6 +136,8 @@ html {
   display: grid;
   place-items: center;
   isolation: isolate;
+  /* Gentle floating motion to make the whole orb feel alive */
+  animation: orb-float 6s ease-in-out infinite;
 }
 
 .orb-halo {
