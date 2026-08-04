@@ -22,6 +22,8 @@ $action = {
     git add -A
     # Commit with a generic message
     git commit -m "new change"
+    # Push the commit to the remote repository
+    git push
 }
 
 # Register events for change types
