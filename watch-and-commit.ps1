@@ -18,11 +18,11 @@ $watcher.EnableRaisingEvents = $true
 $action = {
     # Debounce rapid events by waiting a short time
     Start-Sleep -Milliseconds 500
+    Write-Host "Change detected, staging and committing..."
     # Stage all changes
     git add -A
     # Commit with a generic message
     git commit -m "new change"
-    # Push the commit to the remote repository
     # Push the commit to the remote repository (master branch)
     git push origin master
 }
