@@ -28,4 +28,8 @@ Open the folder in VS Code and use a live server extension, or open index.html d
 2. Sign in to Vercel.
 3. Import the GitHub repository.
 4. Vercel will deploy it automatically.
+<<<<<<< HEAD
 >>>>>>> f79369f (Initial commit with portfolio updates)
+=======
+# Test change 08/04/2026 14:12:59
+>>>>>>> 1bbde39 (new change)
