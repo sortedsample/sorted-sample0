@@ -36,4 +36,8 @@ Open the folder in VS Code and use a live server extension, or open index.html d
 >>>>>>> 1bbde39 (new change)
 =======
 # Test change 08/04/2026 14:14:24
+<<<<<<< HEAD
 >>>>>>> 84aedac (new change)
+=======
+\nTest change 08/04/2026 14:15:34
+>>>>>>> 5120f24 (new change)
