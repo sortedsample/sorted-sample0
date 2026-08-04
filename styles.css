@@ -173,6 +173,8 @@ html {
   display: block;
   width: 100%;
   text-align: center;
+  /* Remove letter-spacing so the single "S" glyph sits truly centered */
+  letter-spacing: 0;
 }
 
 /* ΓöÇΓöÇ Orbiting chips ΓöÇΓöÇ */
