@@ -147,8 +147,8 @@ html {
   background: radial-gradient(circle at 30% 25%, rgba(255,255,255,0.18), rgba(179,136,255,0.16) 38%, rgba(20,7,31,0.96) 72%);
   border: 1px solid rgba(255,255,255,0.16);
   box-shadow: 0 0 0 1px rgba(255,255,255,0.03), 0 30px 80px rgba(139,92,246,0.28), inset 0 0 40px rgba(255,255,255,0.08);
-  /* Add a slow rotation to give the orb a subtle dynamic feel */
-  animation: halo-rotate 30s linear infinite;
+  /* Slow rotation plus a soft breathing glow to give the orb a dynamic feel */
+  animation: halo-rotate 30s linear infinite, halo-glow 5s ease-in-out infinite;
 }
 
 .orb-core {
