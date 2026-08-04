@@ -32,4 +32,8 @@ Open the folder in VS Code and use a live server extension, or open index.html d
 >>>>>>> f79369f (Initial commit with portfolio updates)
 =======
 # Test change 08/04/2026 14:12:59
+<<<<<<< HEAD
 >>>>>>> 1bbde39 (new change)
+=======
+# Test change 08/04/2026 14:14:24
+>>>>>>> 84aedac (new change)
