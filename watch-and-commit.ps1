@@ -28,8 +28,8 @@ $action = {
     # Commit with a generic message and capture output
     $commitResult = git commit -m "new change" 2>&1
     Write-Host "git commit output: $commitResult"
-    # Push the commit to the remote repository (master branch) and capture output
-    $pushResult = git push origin master 2>&1
+    # Push the commit to the remote repository (main branch) and capture output
+    $pushResult = git push origin main 2>&1
     Write-Host "git push output: $pushResult"
 }
 
