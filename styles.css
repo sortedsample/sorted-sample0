@@ -1,0 +1,12 @@
+/* Minimal stylesheet for portfolio site */
+:root {
+  --bg: #14071f;
+  --text: #fdfbff;
+  --accent: #b388ff;
+}
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
