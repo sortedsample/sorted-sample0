@@ -12,12 +12,15 @@ $watcher = New-Object System.IO.FileSystemWatcher
 $watcher.Path = $scriptDir
 $watcher.IncludeSubdirectories = $true
 $watcher.Filter = "*.*"
+$watcher.NotifyFilter = [IO.NotifyFilters]'FileName, LastWrite, CreationTime, Size'
 $watcher.EnableRaisingEvents = $true
 
 # Define the action to take on change events
 $action = {
     # Debounce rapid events by waiting a short time
     Start-Sleep -Milliseconds 500
+    # Log which file triggered the event
+    Write-Host "File changed: $($event.SourceEventArgs.FullPath)"
     Write-Host "Change detected, staging and committing..."
     # Stage all changes and capture output
     $addResult = git add -A 2>&1
