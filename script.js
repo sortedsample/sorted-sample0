@@ -114,4 +114,8 @@ if (toggle && navLinks) {
     navLinks.classList.toggle('open');
   });
 }
+<<<<<<< HEAD
 >>>>>>> f79369f (Initial commit with portfolio updates)
+=======
+// test change 08/04/2026 14:14:32
+>>>>>>> 500c3f3 (new change)
